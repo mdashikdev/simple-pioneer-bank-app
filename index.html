@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pioneer Bank</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="alert_bar" class="px-4 py-1 rounded m-5 shadow">
+        Hello error
+    </div>
+    <div id="logoutBtn" class="px-4 py-1 rounded m-5 shadow">
+        Logout
+    </div>
+    <div class="grid place-items-center h-screen">
+        <div class="w-5/15" id="login_area">
+            <h2 class="text-3xl font-bold text-center">Welcome to Pioneer Bank</h2>
+            <div class="w-full mt-7 rounded-md shadow-lg p-8 ">
+                <span>Login</span>
+                <form action="" id="login_form" autocomplete="off">
+                    <input name="email" class="w-full text-sm mt-2 border outline-none rounded-sm p-1" type="email" placeholder="Email...">
+                    <input name="pass" class="w-full text-sm mt-2 border outline-none rounded-sm p-1" type="password" placeholder="Password...">
+                    <input type="submit" class="rounded-md mt-3 px-3 ease-out duration-300 hover:shadow-md text-white bg-green-400 hover:bg-green-500 pb-1  cursor-pointer" value="Login" name="" id="">
+                </form>
+            </div>
+        </div>
+
+        <div class="w-7/12 " id="dashboard_area" style="display:none">
+            <div id="reset" class="px-4 py-1 rounded m-5 shadow">
+                Reset
+            </div>
+            <div class="flex gap-4">
+                <div class="w-1/3 grid bg-blue-500 p-3 rounded-md ">
+                    <span class="text-white ">Deposite</span>
+                    <span id="deposite_container" class="text-white text-5xl font-bold">$0</span>
+                </div>
+                <div class="w-1/3 grid bg-red-500 p-3 rounded-md ">
+                    <span class="text-white ">Withdraw</span>
+                    <span id="withdraw_container" class="text-white text-5xl font-bold">$0</span>
+                </div>
+                <div class="w-1/3 grid bg-orange-400 p-3 rounded-md ">
+                    <span class="text-white ">Balance</span>
+                    <span id="balance_container" class="text-white text-5xl font-bold">$0</span>
+                </div>
+            </div>
+                <div class="w-full justify-between flex gap-10 mt-16 ">
+                    <div class="rounded-md w-3/6 shadow-lg p-8 ">
+                        <span>Deposite</span>
+                        <form action="" id="deposite_form" onsubmit="return false" autocomplete="off">
+                            <input name="amount" class="w-full text-sm mt-2 border outline-none rounded-sm p-1" type="number" placeholder="$ amount you want to deposite..">
+                            <input type="submit" class="rounded-md shadow-sm mt-3 px-3 ease-out duration-300 hover:shadow-md text-white bg-green-400 hover:bg-green-500 pb-1  cursor-pointer" value="Deposite" name="" id="">
+                        </form>
+                    </div>
+
+                    <div class="rounded-md w-3/6 shadow-lg p-8 ">
+                        <span>Withdraw</span>
+                        <form action="" id="withdraw_form" onsubmit="return false" autocomplete="off">
+                            <input name="amount" class="w-full text-sm mt-2 border outline-none rounded-sm p-1" type="number" placeholder="$ amount you want to withdraw..">
+                            <input type="submit" class="rounded-md shadow-sm mt-3 px-3 ease-out duration-300 hover:shadow-md text-white bg-green-400 hover:bg-green-500 pb-1  cursor-pointer" value="Withdraw" name="" id="">
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
